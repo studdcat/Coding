@@ -50,4 +50,13 @@ def solution(arr):
     
     return answer
 
+def solution(arr):
+    x = -1
+    lst = []
+    for i in range(len(arr)):
+        if x != arr[i]:
+            x = arr[i]
+            lst.append(arr[i])
+    return lst
+
 print(solution([1,0,0,0]))
