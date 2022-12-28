@@ -25,16 +25,11 @@
 
 def solution(array, commands):
     answer = []
-    num = []
-    for i in commands:
-        print(num[i][0])
-        array = array[num[i][0]-1:num[i][1]]
-        for j in i:
-            num.append(j)
-    array = array[num[0]-1:num[1]]
-    array = sorted(array)
-    answer = array[num[2]-1]
-    print(answer)
-    return answer
+    i = 0
 
-solution([1, 5, 2, 6, 3, 7, 4],[[2, 5, 3], [4, 4, 1], [1, 7, 3]])
+    for n in commands:
+        sort_arr = sorted(array[commands[i][0]-1:commands[i][1]])
+        answer.append(sort_arr[commands[i][2] -1])
+        i += 1
+
+    return answer
